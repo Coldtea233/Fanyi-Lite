@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "百度翻译 · 简净",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "精简百度翻译的文本、文档和图片工作区，提供深色模式和紧凑工具栏。",
   "permissions": ["storage"],
   "icons": {
