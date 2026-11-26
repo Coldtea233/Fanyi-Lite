@@ -1,4 +1,5 @@
 #btf-theme, #btf-account-slot, #btf-deep, #btf-modes { display: none; }
+html[data-btf-starting] body { opacity: 0 !important; }
 
 @scope (html[data-btf]) {
   :scope {

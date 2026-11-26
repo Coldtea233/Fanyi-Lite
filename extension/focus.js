@@ -13,6 +13,7 @@
   const onPage = () => Boolean(currentMode());
   const system = matchMedia('(prefers-color-scheme: dark)');
   let preference, frame, accountSlot, themeButton, deepButton, lastMore, busy = false;
+  let themeReady = false;
   let assistantRequested = false;
   let autoClosedDrawer;
   const assistantTrigger = '.GD40EXru, .OoXf2O55, .TnZmezJA, .RGZT5XFz';
@@ -23,6 +24,19 @@
   const nameIndex = [0, 1].map(index => new Map(names.map(([id, pair]) => [pair[index], id])));
   const recents = {};
   let modeNav;
+
+  const initialMode = currentMode();
+  if (initialMode) {
+    root.setAttribute('data-btf', initialMode);
+    root.setAttribute('data-btf-starting', '');
+    paintTheme();
+  }
+  // Reveal the page even if extension storage is slow or unavailable.
+  const startupTimeout = initialMode && setTimeout(finishStartup, 500);
+  function finishStartup() {
+    clearTimeout(startupTimeout);
+    root.removeAttribute('data-btf-starting');
+  }
 
   document.addEventListener('click', event => {
     if (!event.isTrusted || !onPage() || !(event.target instanceof Element)) return;
@@ -144,7 +158,12 @@
   }
   chrome.storage.local.get('btfTheme').then(data => {
     if (preference === undefined) preference = data.btfTheme;
+  }, () => {
+    // The system theme remains active if storage cannot be read.
+  }).finally(() => {
+    themeReady = true;
     paintTheme();
+    schedule();
   });
   chrome.storage.onChanged.addListener((changes, area) => {
     if (area === 'local' && changes.btfTheme) {
@@ -305,12 +324,14 @@
 
   function update() {
     frame = 0;
+    if (!document.body) return;
     const mode = currentMode();
     if (!mode) {
       assistantRequested = false;
       autoClosedDrawer = undefined;
       root.removeAttribute('data-btf');
       root.removeAttribute('data-btf-dark');
+      finishStartup();
       return;
     }
     if (root.getAttribute('data-btf') !== mode) root.setAttribute('data-btf', mode);
@@ -356,11 +377,12 @@
         expand.click();
       });
     }
+    if (themeReady && root.hasAttribute('data-btf-starting')) finishStartup();
   }
   function schedule() {
     if (!frame) frame = requestAnimationFrame(update);
   }
-  new MutationObserver(schedule).observe(document.body, {
+  new MutationObserver(schedule).observe(root, {
     subtree: true, childList: true, characterData: true, attributes: true, attributeFilter: ['class']
   });
   addEventListener('popstate', schedule);
