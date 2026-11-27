@@ -1,6 +1,10 @@
 # Fanyi-Lite · 简净翻译
 
 适用于 Microsoft Edge 的百度翻译界面增强扩展。它精简文本、文档和图片三个翻译工作区，收起部分推广内容，统一编辑器、弹出菜单、历史记录和收藏夹的样式。翻译、AI 助手、词典与文件上传仍由百度翻译提供。本项目由独立开发者维护。
+# 前后对比
+<img width="2846" height="1436" alt="image" src="https://github.com/user-attachments/assets/725ded68-2f26-4080-b5b3-b4e66a5ce6d7" />
+<img width="2864" height="1450" alt="image" src="https://github.com/user-attachments/assets/e580db20-231e-432e-b20b-a2f1fe8e5395" />
+<img width="2864" height="1450" alt="image" src="https://github.com/user-attachments/assets/61ffbc87-c9ca-490b-bdd4-17ee6a135c22" />
 
 ## 本地安装
 
