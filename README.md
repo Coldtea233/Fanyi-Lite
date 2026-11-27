@@ -4,7 +4,8 @@
 # 前后对比
 <img width="2861" height="1458" alt="image" src="https://github.com/user-attachments/assets/af2e062d-0429-42ce-9cce-c6f03f28f791" />
 <img width="2864" height="1450" alt="image" src="https://github.com/user-attachments/assets/ee633716-1241-4a07-ad6c-d61050503560" />
-<img width="2864" height="1450" alt="image" src="https://github.com/user-attachments/assets/e580db20-231e-432e-b20b-a2f1fe8e5395" />
+<img width="2864" height="1450" alt="image" src="https://github.com/user-attachments/assets/de40be19-83ce-43bd-9997-24a756f0e8d7" />
+
 
 ## 从 Microsoft Edge 获取拓展
 https://microsoftedge.microsoft.com/addons/detail/%E7%99%BE%E5%BA%A6%E7%BF%BB%E8%AF%91-%C2%B7-%E7%AE%80%E5%87%80/jimennebnfnfdiiohfkdkheppnicbpif?hl=zh-CN
