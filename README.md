@@ -3,7 +3,7 @@
 适用于Edge的百度翻译界面美化扩展，保留完整输出结果的同时，移除所有广告和无关内容，优化原本的UI并提供全新的深色模式
 # 前后对比
 <img width="2861" height="1458" alt="image" src="https://github.com/user-attachments/assets/af2e062d-0429-42ce-9cce-c6f03f28f791" />
-<img width="2864" height="1450" alt="image" src="https://github.com/user-attachments/assets/4a735bce-e5b9-4dd8-b58d-b2537a58fd52" />
+<img width="2864" height="1450" alt="image" src="https://github.com/user-attachments/assets/ee633716-1241-4a07-ad6c-d61050503560" />
 <img width="2864" height="1450" alt="image" src="https://github.com/user-attachments/assets/e580db20-231e-432e-b20b-a2f1fe8e5395" />
 
 ## 从 Microsoft Edge 获取拓展
