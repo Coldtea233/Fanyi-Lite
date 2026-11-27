@@ -17,6 +17,6 @@ https://microsoftedge.microsoft.com/addons/detail/%E7%99%BE%E5%BA%A6%E7%BF%BB%E8
 3. 选择「加载解压缩的扩展」，选中 `manifest.json` 所在的文件夹。
 4. 打开或刷新百度翻译。右侧的主题按钮可以切换浅色和深色模式。
 
-收藏需要登录百度账号。未收藏时，单击星标添加到系统分组，长按可选择分组。页面上的选项以百度翻译实际提供的功能为准。
+命名灵感来源于百度贴吧经典美化项目：Tieba-Lite
 
 [隐私政策](PRIVACY.md)
